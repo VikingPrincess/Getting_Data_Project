@@ -1,15 +1,16 @@
 # Source : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+# none of the following code would be possible without my friends -
+# http://www.statmethods.net/ and http://stackoverflow.com/
 
 # This R script does the following:
 
 # 1. Merges the training and the test sets to create one data set.
 
 #download
-#dataset_url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-#download.file(dataset_url, "getdata-projectfiles-UCI HAR Dataset.zip")
+dataset_url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(dataset_url, "getdata-projectfiles-UCI HAR Dataset.zip")
 #unzip
-#unzip("getdata-projectfiles-UCI HAR Dataset.zip", exdir = "UCI HAR Dataset")
-
+unzip("getdata-projectfiles-UCI HAR Dataset.zip", exdir = "UCI HAR Dataset")
 
 tmp1 <- read.table("train/X_train.txt")
 tmp2 <- read.table("test/X_test.txt")
